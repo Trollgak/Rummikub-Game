@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 멀티플레이 루미큐브</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ES Module로 game.js 로드 -->
+    <script type="module" src="game.js"></script>
+</head>
+<body>
+    <!-- 방 접속 및 상태 표시 바 -->
+    <div id="room-bar">
+        <input type="text" id="room-id-input" placeholder="방 코드 (예: room123)" value="room1">
+        <button id="join-room-btn">방 입장 / 생성</button>
+        <button id="reset-game-btn">게임 새로고침</button>
+        <span id="connection-status">상태: 연결 대기 중</span>
+    </div>
+
+    <div id="game-container">
+        <!-- 공용 보드 (실시간 동기화 영역) -->
+        <div id="board-label">공용 보드</div>
+        <div id="board" class="dropzone" data-zone="board"></div>
+
+        <!-- 내 패 덱 -->
+        <div id="deck-label">내 타일 덱</div>
+        <div id="my-deck" class="dropzone" data-zone="deck"></div>
+    </div>
+</body>
+</html>
